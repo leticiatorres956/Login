@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/v4-shims.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/svg-with-js.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-8">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-2">Sign In</h2>
+    <p class="text-sm text-center text-gray-500 mb-6">Access your account with email or social login</p>
+
+    <!-- Social buttons -->
+    <div class="flex justify-center gap-4 mb-6">
+      <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 w-10 h-10">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button class="bg-red-500 hover:bg-red-600 text-white rounded-full p-2 w-10 h-10">
+        <i class="fab fa-google"></i>
+      </button>
+      <button class="bg-blue-800 hover:bg-blue-900 text-white rounded-full p-2 w-10 h-10">
+        <i class="fab fa-linkedin-in"></i>
+      </button>
+    </div>
+
+    <!-- Divider -->
+    <div class="flex items-center my-4">
+      <hr class="flex-grow border-gray-300" />
+      <span class="mx-2 text-sm text-gray-500">or use your email</span>
+      <hr class="flex-grow border-gray-300" />
+    </div>
+
+    <!-- Form -->
+    <form action="#">
+      <div class="mb-4 relative">
+        <input type="email" placeholder="Email" required
+          class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <span class="absolute left-3 top-3.5 text-gray-400">
+          📧
+        </span>
+      </div>
+
+      <div class="mb-4 relative">
+        <input type="password" placeholder="Password" required id="password"
+          class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <span class="absolute left-3 top-3.5 text-gray-400">
+          🔒
+        </span>
+        <span class="absolute right-3 top-3.5 cursor-pointer text-blue-500 text-sm" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <div class="flex justify-between items-center mb-4">
+        <label class="inline-flex items-center text-sm">
+          <input type="checkbox" class="form-checkbox text-blue-600" />
+          <span class="ml-2 text-gray-700">Remember me</span>
+        </label>
+        <a href="#" class="text-sm text-blue-600 hover:underline">Forgot your password?</a>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded-lg transition">
+        Sign In
+      </button>
+    </form>
+  </div>
+
+  <!-- Optional: FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a2e0e6f91b.js" crossorigin="anonymous"></script>
+
+  <!-- Show/hide password -->
+  <script>
+    function togglePassword() {
+      const input = document.getElementById("password");
+      input.type = input.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>
